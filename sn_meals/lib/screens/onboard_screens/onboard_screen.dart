@@ -3,7 +3,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:sn_meals/common/color_extention.dart';
 import 'package:sn_meals/common_wdigets/intro_page.dart';
 import 'package:sn_meals/common_wdigets/round_button.dart';
-import 'package:sn_meals/screens/login_screens/welcome_screen.dart';
+import 'package:sn_meals/screens/login/welcome_screen.dart';
 
 //import 'package:sn_meals/screens/login/welcome_screen.dart';
 

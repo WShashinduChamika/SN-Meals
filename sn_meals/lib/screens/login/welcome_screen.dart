@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:sn_meals/common/color_extention.dart';
 import 'package:sn_meals/common_wdigets/round_button.dart';
+import 'package:sn_meals/screens/login/login_screen.dart';
 
 
 class WelcomeScreen extends StatefulWidget {
@@ -85,11 +86,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 horizontal: screenHeight >= 800 ? width * 34 : width * 44),
             child: RoundButton(
               onPressed: () {
-                print('Login');
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => const LoginScreen()),
-                // );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const LoginScreen()),
+                );
               },
               title: "Login",
               type: RoundButtonType.bgPrimary,
