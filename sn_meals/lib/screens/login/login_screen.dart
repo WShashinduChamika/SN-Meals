@@ -4,6 +4,7 @@ import 'package:sn_meals/common/color_extention.dart';
 import 'package:sn_meals/common_wdigets/round_button.dart';
 import 'package:sn_meals/common_wdigets/round_icon_button.dart';
 import 'package:sn_meals/common_wdigets/round_textfield.dart';
+import 'package:sn_meals/screens/login/reset_password_screen.dart';
 import 'package:sn_meals/screens/login/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -74,7 +75,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: height * 10,
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ResetPasswordScreen(),
+                    ),
+                  );
+                },
                 child: Text(
                   'Forgot your password?',
                   style: TextStyle(
