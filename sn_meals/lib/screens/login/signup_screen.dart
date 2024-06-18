@@ -3,6 +3,7 @@ import 'package:sn_meals/common/color_extention.dart';
 import 'package:sn_meals/common_wdigets/round_button.dart';
 import 'package:sn_meals/common_wdigets/round_textfield.dart';
 import 'package:sn_meals/screens/login/login_screen.dart';
+import 'package:sn_meals/screens/login/otp_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -106,7 +107,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 SizedBox(
                   height: height * 30,
                 ),
-                RoundButton(onPressed: () {}, title: "Sign Up"),
+                RoundButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const OTPScreen()),
+                      );
+                    },
+                    title: "Sign Up"),
                 SizedBox(
                   height: height * 20,
                 ),
