@@ -2,21 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:sn_meals/common/color_extention.dart';
 import 'package:sn_meals/common_wdigets/round_button.dart';
 import 'package:sn_meals/common_wdigets/round_textfield.dart';
-import 'package:sn_meals/screens/login/new_password_screen.dart';
 
-class ResetPasswordScreen extends StatefulWidget {
-  const ResetPasswordScreen({super.key});
+class NewPasswordScreen extends StatefulWidget {
+  const NewPasswordScreen({super.key});
 
   @override
-  State<ResetPasswordScreen> createState() => _ResetPasswordScreenState();
+  State<NewPasswordScreen> createState() => _NewPasswordScreenState();
 }
 
-class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
-  TextEditingController emailController = TextEditingController();
+class _NewPasswordScreenState extends State<NewPasswordScreen> {
+
+  TextEditingController passwordController = TextEditingController();
+  TextEditingController confirmPasswordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width / 375;
+
+   double width = MediaQuery.of(context).size.width / 375;
     double height = MediaQuery.of(context).size.height / 800;
 
     return Scaffold(
@@ -31,14 +33,14 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                 height: height * 60,
               ),
               Text(
-                'Reset Password',
+                'New Password',
                 style: TextStyle(
                   fontSize: width * 30,
                   fontWeight: FontWeight.w800,
                   color: TColor.primaryText,
                 ),
               ),
-              SizedBox(
+               SizedBox(
                 height: height * 10,
               ),
               Text(
@@ -54,22 +56,23 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                 height: height * 70,
               ),
               RoundTextField(
-                hintText: 'Email',
+                hintText: 'Password',
                 keyBoardType: TextInputType.emailAddress,
-                controller: emailController,
+                controller: passwordController,
               ),
               SizedBox(
                 height: height * 20,
               ),
-              RoundButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const NewPasswordScreen()),
-                    );
-                  },
-                  title: "Send"),
+               RoundTextField(
+                hintText: 'Confirm Password',
+                keyBoardType: TextInputType.emailAddress,
+                controller: confirmPasswordController,
+              ),
+              SizedBox(
+                height: height * 20,
+              ),
+              RoundButton(onPressed: () {}, title: "Next"),
+              
             ],
           ),
         ),
