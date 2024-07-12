@@ -72,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               RoundButton(
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                           builder: (context) => const MainTab()),
