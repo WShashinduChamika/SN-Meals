@@ -39,12 +39,12 @@ class PopularResturant extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: TColor.primaryText,
-                fontSize: width * 17,
+                fontSize: width * 16,
                 fontWeight: FontWeight.w700,
               ),
             ),
             SizedBox(
-              height: height * 8,
+              height: height * 5,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,

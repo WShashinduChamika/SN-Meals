@@ -38,7 +38,7 @@ class CategoryCollectionType extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: TColor.primaryText,
-                  fontSize: width * 17,
+                  fontSize: width * 14,
                   fontWeight: FontWeight.w700),
             ),
           ],
