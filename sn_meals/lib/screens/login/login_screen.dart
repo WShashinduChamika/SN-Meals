@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:sn_meals/common/color_extention.dart';
 import 'package:sn_meals/common_wdigets/round_button.dart';
 import 'package:sn_meals/common_wdigets/round_icon_button.dart';
 import 'package:sn_meals/common_wdigets/round_textfield.dart';
 import 'package:sn_meals/screens/login/reset_password_screen.dart';
 import 'package:sn_meals/screens/login/signup_screen.dart';
+import 'package:sn_meals/screens/main_tab_screen/main_tab.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -70,7 +70,15 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(
                 height: height * 25,
               ),
-              RoundButton(onPressed: () {}, title: "Login"),
+              RoundButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const MainTab()),
+                    );
+                  },
+                  title: "Login"),
               SizedBox(
                 height: height * 10,
               ),
