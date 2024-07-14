@@ -67,6 +67,7 @@ flutter:
     - assets/img/authenticate_screens/
     - assets/img/home_screen/
     - assets/img/mian_tab/
+    - assets/img/menu/
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
