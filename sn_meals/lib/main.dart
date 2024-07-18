@@ -1,5 +1,8 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
+import 'package:sn_meals/screens/home/home_screen.dart';
+import 'package:sn_meals/screens/main_tab_screen/main_tab.dart';
+import 'package:sn_meals/screens/menu/menu.dart';
 import 'package:sn_meals/screens/onboard_screens/splash_screen.dart';
 
 void main() {
@@ -24,7 +27,7 @@ class SN_Meals extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SplashScreen(),
+      home: const MainTab(),
     );
   }
 }
