@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:sn_meals/common/catergory_collection_type.dart';
+import 'package:sn_meals/common_wdigets/catergory_collection_type.dart';
 import 'package:sn_meals/common/color_extention.dart';
-import 'package:sn_meals/common/most_popular_resturant.dart';
-import 'package:sn_meals/common/popular_resturant.dart';
-import 'package:sn_meals/common/resent%20_items.dart';
-import 'package:sn_meals/common/title_row.dart';
+import 'package:sn_meals/common_wdigets/most_popular_resturant.dart';
+import 'package:sn_meals/common_wdigets/popular_resturant.dart';
+import 'package:sn_meals/common_wdigets/resent%20_items.dart';
+import 'package:sn_meals/common_wdigets/title_row.dart';
 import 'package:sn_meals/common_wdigets/round_textfield.dart';
 
 class HomeScreen extends StatefulWidget {
