@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:sn_meals/common/color_extention.dart';
-import 'package:sn_meals/common/tab_button.dart';
+import 'package:sn_meals/common_wdigets/tab_button.dart';
 import 'package:sn_meals/screens/home/home_screen.dart';
 import 'package:sn_meals/screens/menu/menu.dart';
 
