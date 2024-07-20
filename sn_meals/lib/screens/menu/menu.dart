@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sn_meals/common/color_extention.dart';
 import 'package:sn_meals/common_wdigets/round_textfield.dart';
+import 'package:sn_meals/screens/menu/menu_item_list.dart';
 
 class MenuScreen extends StatefulWidget {
   const MenuScreen({super.key});
@@ -41,34 +42,6 @@ class _MenuScreenState extends State<MenuScreen> {
 
     return SafeArea(
       child: Scaffold(
-        //backgroundColor: const Color(0xFFF5F5F5),
-        // appBar: AppBar(
-        //   backgroundColor: Colors.white,
-        //   title: Padding(
-        //     padding: EdgeInsets.only(left: width * 10),
-        //     child: Text(
-        //       'Menu',
-        //       style: TextStyle(
-        //         fontSize: width * 20,
-        //         fontWeight: FontWeight.w800,
-        //         color: TColor.primaryText,
-        //       ),
-        //     ),
-        //   ),
-        //   actions: [
-        //     Padding(
-        //       padding: EdgeInsets.symmetric(horizontal: width * 20),
-        //       child: IconButton(
-        //         onPressed: () {},
-        //         icon: Image.asset(
-        //           'assets/img/menu/cart.png',
-        //           height: height * 25,
-        //           width: width * 25,
-        //         ),
-        //       ),
-        //     ),
-        //   ],
-        // ),
         body: Column(
           children: [
             Padding(
@@ -115,6 +88,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       ]),
                 ),
                 SingleChildScrollView(
+                  scrollDirection: Axis.vertical,
                   child: Padding(
                     padding: EdgeInsets.symmetric(
                       vertical: height * 0,
@@ -153,7 +127,13 @@ class _MenuScreenState extends State<MenuScreen> {
                           itemBuilder: (context, index) {
                             var menuObj = menuArr[index] as Map? ?? {};
                             return GestureDetector(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MenuItems(obj: menuObj)),
+                            );
+                              },
                               child: Stack(
                                 alignment: Alignment.centerRight,
                                 children: [
