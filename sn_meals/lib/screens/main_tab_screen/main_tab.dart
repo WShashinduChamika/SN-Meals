@@ -4,6 +4,7 @@ import 'package:sn_meals/common/color_extention.dart';
 import 'package:sn_meals/common_wdigets/tab_button.dart';
 import 'package:sn_meals/screens/home/home_screen.dart';
 import 'package:sn_meals/screens/menu/menu.dart';
+import 'package:sn_meals/screens/offers/offer_screen.dart';
 
 class MainTab extends StatefulWidget {
   const MainTab({super.key});
@@ -80,7 +81,7 @@ class _MainTabState extends State<MainTab> {
                 onTap: () {
                   if (selectTab != 1) {
                     selectTab = 1;
-                    //selectPageScreen = const OffersScreen();
+                    selectPageScreen = const OffersScreen();
                   }
                   if (mounted) {
                     setState(() {});
