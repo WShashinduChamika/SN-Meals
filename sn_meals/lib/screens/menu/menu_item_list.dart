@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:sn_meals/common/color_extention.dart';
 import 'package:sn_meals/common_wdigets/menu_item.dart';
 import 'package:sn_meals/common_wdigets/round_textfield.dart';
+import 'package:sn_meals/screens/menu/item_details.dart';
 
 class MenuItems extends StatefulWidget {
   final Map obj;
@@ -98,11 +99,11 @@ class _MenuItemsState extends State<MenuItems> {
                 children: [
                   Expanded(
                       child: GestureDetector(
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                        child: Row(
-                                            children: [
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Row(
+                      children: [
                         Image.asset(
                           'assets/img/menu/back.png',
                           height: height * 25,
@@ -119,9 +120,9 @@ class _MenuItemsState extends State<MenuItems> {
                             color: TColor.primaryText,
                           ),
                         ),
-                                            ],
-                                          ),
-                      )),
+                      ],
+                    ),
+                  )),
                   Image.asset(
                     'assets/img/home_screen/cart.png',
                     height: height * 25,
@@ -146,9 +147,9 @@ class _MenuItemsState extends State<MenuItems> {
                 ),
               ),
             ),
-             SizedBox(
-                        height: height * 20,
-                      ),
+            SizedBox(
+              height: height * 20,
+            ),
             Expanded(
               child: SingleChildScrollView(
                 child: Padding(
@@ -166,7 +167,13 @@ class _MenuItemsState extends State<MenuItems> {
                           var cObj = menuItemsArr[index] as Map? ?? {};
                           return MenuItem(
                             obj: cObj,
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const ItemDetails()));
+                            },
                           );
                         }),
                       ),
