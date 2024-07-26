@@ -70,6 +70,7 @@ flutter:
     - assets/img/mian_tab/
     - assets/img/menu/
     - assets/img/offer_screen/
+    - assets/img/more/
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
