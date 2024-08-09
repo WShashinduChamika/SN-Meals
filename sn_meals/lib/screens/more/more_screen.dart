@@ -1,7 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sn_meals/common/color_extention.dart';
-import 'package:sn_meals/screens/menu/menu_item_list.dart';
+import 'package:sn_meals/screens/more/notification_screen.dart';
+
 
 class MoreScreen extends StatefulWidget {
   const MoreScreen({super.key});
@@ -94,7 +94,12 @@ class _MoreScreenState extends State<MoreScreen> {
                                   break;
                     
                                 case "2":
-                                  print("Payments");
+                                  print("Notifications");
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => const NotificationScreen()),
+                                  );
                                   
                                   break;
                     
