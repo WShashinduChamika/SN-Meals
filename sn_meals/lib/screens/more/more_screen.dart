@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sn_meals/common/color_extention.dart';
+import 'package:sn_meals/screens/more/my_order_screen.dart';
 import 'package:sn_meals/screens/more/notification_screen.dart';
 import 'package:sn_meals/screens/more/payment_details_screen.dart';
 
@@ -95,6 +96,12 @@ class _MoreScreenState extends State<MoreScreen> {
                                   break;
 
                                 case "1":
+                                  print("My Order");
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const MyOrderScreen()));
                                   break;
 
                                 case "2":
