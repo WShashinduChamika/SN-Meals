@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sn_meals/common/color_extention.dart';
 import 'package:sn_meals/screens/more/notification_screen.dart';
-
+import 'package:sn_meals/screens/more/payment_details_screen.dart';
 
 class MoreScreen extends StatefulWidget {
   const MoreScreen({super.key});
@@ -43,7 +43,7 @@ class _MoreScreenState extends State<MoreScreen> {
       child: Scaffold(
         body: Column(
           children: [
-             Padding(
+            Padding(
               padding:
                   EdgeInsets.symmetric(horizontal: 12, vertical: height * 20),
               child: Row(
@@ -86,31 +86,36 @@ class _MoreScreenState extends State<MoreScreen> {
                               switch (index.toString()) {
                                 case "0":
                                   print("Payments");
-                                  
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const PaymentDetailsSreen()));
+
                                   break;
-                    
+
                                 case "1":
-                                  
                                   break;
-                    
+
                                 case "2":
                                   print("Notifications");
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => const NotificationScreen()),
+                                        builder: (context) =>
+                                            const NotificationScreen()),
                                   );
-                                  
+
                                   break;
-                    
+
                                 case "3":
                                   print("Payments");
-                                  
+
                                   break;
-                    
+
                                 case "4":
                                   print("Payments");
-                                 
+
                                   break;
                               }
                             },
@@ -208,8 +213,8 @@ class _MoreScreenState extends State<MoreScreen> {
                                           ]),
                                       child: Center(
                                         child: Image(
-                                          image:
-                                              AssetImage('assets/img/more/more_next2.png'),
+                                          image: AssetImage(
+                                              'assets/img/more/more_next2.png'),
                                           width: width * 11,
                                           height: height * 11,
                                         ),
